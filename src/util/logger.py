@@ -11,8 +11,9 @@ ch = logging.StreamHandler()
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
-fh = logging.handlers.RotatingFileHandler(
-    '../log/all.log', backupCount=10, maxBytes=2**20)
+fh = logging.handlers.RotatingFileHandler('../log/all.log',
+                                          backupCount=10,
+                                          maxBytes=2**20)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
 
